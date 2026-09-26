@@ -358,44 +358,44 @@
   </footer>
 
   <!-- ========== ПОПАП «ВАШ ФИДБЕК» ========== -->
-  <div class="overlay" id="overlay"></div>
+  <div class="overlay" id="overlay">
+    <div class="popup" id="popup">
+      <button class="popup__close" id="popupClose" aria-label="Закрыть">&times;</button>
+      <h2 class="popup__title">Ваш фидбек</h2>
+      <form class="popup__form" id="popupForm">
 
-  <div class="popup" id="popup">
-    <button class="popup__close" id="popupClose" aria-label="Закрыть">&times;</button>
-    <h2 class="popup__title">Ваш фидбек</h2>
-    <form class="popup__form" id="popupForm">
-
-      <div class="popup__group">
-        <label for="popupFrequency" class="popup__label">Как часто вы заходите на сайт?</label>
-        <select id="popupFrequency" class="popup__field popup__select">
-          <option>Почти каждый день</option>
-          <option>Несколько раз в неделю</option>
-          <option>Раз в неделю</option>
-          <option>Реже, чем раз в неделю</option>
-        </select>
-      </div>
-
-      <div class="popup__group">
-        <span class="popup__label">Вы подписаны на email рассылку?</span>
-        <div class="popup__radios">
-          <label class="popup__radio">
-            <input type="radio" name="subscribe" value="yes" checked>
-            <span>Да</span>
-          </label>
-          <label class="popup__radio">
-            <input type="radio" name="subscribe" value="no">
-            <span>Нет</span>
-          </label>
+        <div class="popup__group">
+          <label for="popupFrequency" class="popup__label">Как часто вы заходите на сайт?</label>
+          <select id="popupFrequency" class="popup__field popup__select">
+            <option>Почти каждый день</option>
+            <option>Несколько раз в неделю</option>
+            <option>Раз в неделю</option>
+            <option>Реже, чем раз в неделю</option>
+          </select>
         </div>
-      </div>
 
-      <div class="popup__group">
-        <label for="popupMessage" class="popup__label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
-        <textarea id="popupMessage" class="popup__field popup__field--textarea" placeholder="Может, больше рецептов?"></textarea>
-      </div>
+        <div class="popup__group">
+          <span class="popup__label">Вы подписаны на email рассылку?</span>
+          <div class="popup__radios">
+            <label class="popup__radio">
+              <input type="radio" name="subscribe" value="yes" checked>
+              <span>Да</span>
+            </label>
+            <label class="popup__radio">
+              <input type="radio" name="subscribe" value="no">
+              <span>Нет</span>
+            </label>
+          </div>
+        </div>
 
-      <button type="submit" class="popup__submit">Отправить</button>
-    </form>
+        <div class="popup__group">
+          <label for="popupMessage" class="popup__label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+          <textarea id="popupMessage" class="popup__field popup__field--textarea" placeholder="Может, больше рецептов?"></textarea>
+        </div>
+
+        <button type="submit" class="popup__submit">Отправить</button>
+      </form>
+    </div>
   </div>
 
   <script src="js/script.js"></script>

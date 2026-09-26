@@ -34,10 +34,12 @@ if (popupClose && overlay && popup) {
 }
 
 if (overlay && popup) {
-  overlay.addEventListener('click', function() {
-    popup.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) {
+      popup.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
   });
 }
 
