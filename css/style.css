@@ -192,11 +192,22 @@ ul {
   text-align: center;
   margin-bottom: 40px;
   color: #333;
+  position: relative;
+}
+
+.trends__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #b59f5b;
+  margin: 10px auto 0;
 }
 
 .trends__grid {
   display: flex;
-  gap: 4px;
+  gap: 0;
+  width: 100%;
 }
 
 .trend-card {
@@ -234,6 +245,11 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.trend-card__inner {
+  border: 1px solid #b59f5b;
+  padding: 15px;
 }
 
 .trend-card__tags {
@@ -277,8 +293,8 @@ ul {
 }
 
 .posts {
-  flex: 1 1 66%;
-  max-width: 66%;
+  flex: 1 1 70%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -286,25 +302,35 @@ ul {
 
 .post {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.post:last-child {
+  border-bottom: none;
 }
 
 .post__img {
-  width: 100%;
-  height: 300px;
+  width: 40%;
+  height: auto;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .post__body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1;
 }
 
 .post__tags {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .post__tag-link {
@@ -315,10 +341,11 @@ ul {
 }
 
 .post__title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.3;
   color: #333;
+  text-transform: uppercase;
 }
 
 .post__link {
@@ -330,24 +357,26 @@ ul {
   color: #b59f5b;
 }
 
+.post__meta {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  color: #999;
+}
+
 .post__text {
   font-size: 15px;
   color: #666;
   line-height: 1.6;
 }
 
-.post__meta {
-  font-size: 12px;
-  color: #999;
-}
-
 /* ===== САЙДБАР ===== */
 .sidebar {
-  flex: 1 1 30%;
-  max-width: 30%;
+  flex: 1 1 26%;
+  max-width: 26%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 35px;
 }
 
 .sidebar__block {
@@ -595,8 +624,8 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 20px;
-  border: 2px solid #b59f5b;
+  padding: 0;
+  border: none;
 }
 
 .shop-card__img {
@@ -922,8 +951,8 @@ ul {
   }
 
   .trend-card {
-    flex: 1 1 calc(50% - 2px);
-    max-width: calc(50% - 2px);
+    flex: 1 1 calc(50% - 0px);
+    max-width: calc(50% - 0px);
   }
 
   .content__container {
@@ -996,7 +1025,12 @@ ul {
     min-height: 280px;
   }
 
+  .post {
+    flex-direction: column;
+  }
+
   .post__img {
+    width: 100%;
     height: 200px;
   }
 
